@@ -1,6 +1,8 @@
 # cap-camera-permission
 
-To check camera permission on a capacitor app
+To check and request only the camera permission on a capacitor app. It's a subset of @capacitor/camera and does not require NSPhotoLibraryUsageDescription key.
+
+Use case: When you only care about camera and do not want to request for photo library permissions, for example, accessing camera feed to scan items without the need to save the video.
 
 ## Install
 
@@ -13,10 +15,10 @@ npx cap sync
 
 <docgen-index>
 
-* [`checkPermissions()`](#checkpermissions)
-* [`requestPermissions(...)`](#requestpermissions)
-* [Interfaces](#interfaces)
-* [Type Aliases](#type-aliases)
+- [`checkPermissions()`](#checkpermissions)
+- [`requestPermissions(...)`](#requestpermissions)
+- [Interfaces](#interfaces)
+- [Type Aliases](#type-aliases)
 
 </docgen-index>
 
@@ -35,8 +37,7 @@ Check camera and photo album permissions
 
 **Since:** 1.0.0
 
---------------------
-
+---
 
 ### requestPermissions(...)
 
@@ -54,11 +55,9 @@ Request camera and photo album permissions
 
 **Since:** 1.0.0
 
---------------------
-
+---
 
 ### Interfaces
-
 
 #### CameraPluginPermissions
 
@@ -66,9 +65,7 @@ Request camera and photo album permissions
 | ----------------- | ----------------------- |
 | **`permissions`** | <code>['camera']</code> |
 
-
 ### Type Aliases
-
 
 #### PermissionState
 
