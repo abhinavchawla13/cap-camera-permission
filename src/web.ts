@@ -1,10 +1,21 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { CapCameraPermissionPlugin } from './definitions';
+import type {
+  CameraPluginPermissions,
+  CapCameraPermissionPlugin,
+} from './definitions';
 
-export class CapCameraPermissionWeb extends WebPlugin implements CapCameraPermissionPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+export class CapCameraPermissionWeb
+  extends WebPlugin
+  implements CapCameraPermissionPlugin
+{
+  checkPermissions(): Promise<{ result: PermissionState }> {
+    throw new Error('Method not implemented.');
+  }
+  requestPermissions(
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    _permissions?: CameraPluginPermissions | undefined,
+  ): Promise<{ result: PermissionState }> {
+    throw new Error('Method not implemented.');
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "cap-camera-permission",
-  "version": "0.0.1",
-  "description": "To check camera permission on a capacitor app",
+  "version": "0.0.2",
+  "description": "To check and request only the camera permission on a capacitor app. It's a subset of @capacitor/camera and does not require NSPhotoLibraryUsageDescription key.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -17,10 +17,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stabl-io/cap-camera-permission.git"
+    "url": "git+https://github.com/abhinavchawla13/cap-camera-permission.git"
   },
   "bugs": {
-    "url": "https://github.com/stabl-io/cap-camera-permission/issues"
+    "url": "https://github.com/abhinavchawla13/cap-camera-permission/issues"
   },
   "keywords": [
     "capacitor",

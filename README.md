@@ -13,25 +13,65 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`checkPermissions()`](#checkpermissions)
+* [`requestPermissions(...)`](#requestpermissions)
+* [Interfaces](#interfaces)
+* [Type Aliases](#type-aliases)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### checkPermissions()
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+checkPermissions() => Promise<{ result: PermissionState; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+Check camera and photo album permissions
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ result: any; }&gt;</code>
+
+**Since:** 1.0.0
 
 --------------------
+
+
+### requestPermissions(...)
+
+```typescript
+requestPermissions(permissions?: CameraPluginPermissions | undefined) => Promise<{ result: PermissionState; }>
+```
+
+Request camera and photo album permissions
+
+| Param             | Type                                                                        |
+| ----------------- | --------------------------------------------------------------------------- |
+| **`permissions`** | <code><a href="#camerapluginpermissions">CameraPluginPermissions</a></code> |
+
+**Returns:** <code>Promise&lt;{ result: any; }&gt;</code>
+
+**Since:** 1.0.0
+
+--------------------
+
+
+### Interfaces
+
+
+#### CameraPluginPermissions
+
+| Prop              | Type                    |
+| ----------------- | ----------------------- |
+| **`permissions`** | <code>['camera']</code> |
+
+
+### Type Aliases
+
+
+#### PermissionState
+
+<code>'prompt' | 'prompt-with-rationale' | 'granted' | 'denied'</code>
 
 </docgen-api>

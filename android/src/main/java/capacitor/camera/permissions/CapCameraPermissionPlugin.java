@@ -1,4 +1,4 @@
-package app.stabl.io;
+package capacitor.camera.permissions;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -9,14 +9,13 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "CapCameraPermission")
 public class CapCameraPermissionPlugin extends Plugin {
 
-    private CapCameraPermission implementation = new CapCameraPermission();
+    @PluginMethod
+    public void checkPermissions(PluginCall call) {
+        call.unimplemented("Not implemented on Android.");
+    }
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
-
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+    public void requestPermissions(PluginCall call) {
+        call.unimplemented("Not implemented on Android.");
     }
 }
