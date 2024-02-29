@@ -1,6 +1,6 @@
 {
   "name": "cap-camera-permission",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "To check and request only the camera permission on a capacitor app. It's a subset of @capacitor/camera and does not require NSPhotoLibraryUsageDescription key.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",

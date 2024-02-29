@@ -4,6 +4,12 @@ To check and request only the camera permission on a capacitor app. It's a subse
 
 Use case: When you only care about camera and do not want to request for photo library permissions, for example, accessing camera feed to scan items without the need to save the video.
 
+## How to update
+
+Go inside specific Android and/or iOS folders, make any changes and run `npm run build`. Once ready, can update version in package.json file and then run `npm publish`.
+
+Also, to install it to test locally, you can do `npm install '../<path>/cap-camera-permission'`s
+
 ## Install
 
 ```bash
@@ -28,12 +34,12 @@ npx cap sync
 ### checkPermissions()
 
 ```typescript
-checkPermissions() => Promise<{ result: PermissionState; }>
+checkPermissions() => Promise<{ camera: PermissionState; }>
 ```
 
 Check camera and photo album permissions
 
-**Returns:** <code>Promise&lt;{ result: any; }&gt;</code>
+**Returns:** <code>Promise&lt;{ camera: any; }&gt;</code>
 
 **Since:** 1.0.0
 
@@ -42,7 +48,7 @@ Check camera and photo album permissions
 ### requestPermissions(...)
 
 ```typescript
-requestPermissions(permissions?: CameraPluginPermissions | undefined) => Promise<{ result: PermissionState; }>
+requestPermissions(permissions?: CameraPluginPermissions | undefined) => Promise<{ camera: PermissionState; }>
 ```
 
 Request camera and photo album permissions
@@ -51,7 +57,7 @@ Request camera and photo album permissions
 | ----------------- | --------------------------------------------------------------------------- |
 | **`permissions`** | <code><a href="#camerapluginpermissions">CameraPluginPermissions</a></code> |
 
-**Returns:** <code>Promise&lt;{ result: any; }&gt;</code>
+**Returns:** <code>Promise&lt;{ camera: any; }&gt;</code>
 
 **Since:** 1.0.0
 

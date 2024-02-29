@@ -40,7 +40,7 @@ public class CapCameraPermissionPlugin: CAPPlugin {
                                 state = "prompt"
                 }
             }
-            call.resolve(["result": state])
+            call.resolve(["camera": state])
         }
     }
     

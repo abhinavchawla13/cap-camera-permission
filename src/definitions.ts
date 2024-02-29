@@ -7,7 +7,7 @@ export interface CapCameraPermissionPlugin {
    *
    * @since 1.0.0
    */
-  checkPermissions(): Promise<{ result: PermissionState }>;
+  checkPermissions(): Promise<{ camera: PermissionState }>;
 
   /**
    * Request camera and photo album permissions
@@ -16,5 +16,5 @@ export interface CapCameraPermissionPlugin {
    */
   requestPermissions(
     permissions?: CameraPluginPermissions,
-  ): Promise<{ result: PermissionState }>;
+  ): Promise<{ camera: PermissionState }>;
 }
